@@ -63,24 +63,4 @@ class Snake:
     def get_head_position(self):
         return self.body[0]
 
-    def get_body(self):
-        return self.body
-
-    def length(self):
-        return len(self.body)
-
-    def increase_speed(self, factor=0.2):
-        self.speed += factor
-
-    def get_speed(self):
-        return self.speed
-
-    def hit_wall(self):
-        head_x, head_y = self.body[0]
-        return (
-            head_x < 0 or head_x >= self.screen_width or
-            head_y < 0 or head_y >= self.screen_height
-        )
-
-    def hit_self(self):
-        return self.body[0] in self.body[1:]
+    
